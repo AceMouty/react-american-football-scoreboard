@@ -1,5 +1,5 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, {useState} from "react";
+import React from "react";
 import "./App.css";
 import Buttons from "./buttons";
 import Scoreboard from "./scoreboard";
