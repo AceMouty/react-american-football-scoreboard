@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
 
-function Buttons ({setHomeTouchdown, 
-	setHomeFieldgoal, setAwayTouchdown, setAwayFieldgoal}) {
+function Buttons ({setHomeTouchdown, setHomeFieldgoal, setAwayTouchdown, setAwayFieldgoal}) {
 
 	return (
 		<section className="buttons">
