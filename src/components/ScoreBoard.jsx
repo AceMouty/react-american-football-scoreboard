@@ -1,7 +1,7 @@
 import React from 'react'
 import BottomRow from './BottomRow'
 
-function Scoreboard({home, away, quarter}){
+function Scoreboard({home, away, quarter, down}){
   return (
       <section className="scoreboard">
         <div className="topRow">
@@ -18,7 +18,7 @@ function Scoreboard({home, away, quarter}){
             <div className="away__score">{away}</div>
           </div>
         </div>
-        <BottomRow quarter={quarter}/>
+        <BottomRow quarter={quarter} down={down}/>
       </section>
   )
 }

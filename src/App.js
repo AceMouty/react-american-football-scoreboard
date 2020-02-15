@@ -9,6 +9,7 @@ function App() {
   const [home, setHome] = useState(0)
   const [away, setAway] = useState(0)
   const [quarter, setQuarter] = useState(1)
+  const [down, setDown] = useState(1)
 
   function handleScoreboardClick(team, amount){
     if(team === "home" && amount === 6){
@@ -22,10 +23,22 @@ function App() {
     }
   }
 
+  function handleStatsClick(stat){
+    
+    if(stat == "down" && down === 4){
+      setDown(1)
+    } else if(stat === "down"){
+      setDown(down + 1)    
+    } else if(stat === "quarter" && quarter === 4){
+      setQuarter(1)
+    } else {
+      setQuarter(quarter + 1)
+    }
+  }
   return (
     <div className="container">
-      <Scoreboard home={home} away={away} quarter={quarter}/>
-      <Buttons handleScoreboardClick={handleScoreboardClick} home={home} away={away}/>
+      <Scoreboard home={home} away={away} quarter={quarter} down={down}/>
+      <Buttons handleStatsClick={handleStatsClick} handleScoreboardClick={handleScoreboardClick}/>
     </div>
   );
 }
